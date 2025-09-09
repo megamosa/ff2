@@ -1,0 +1,477 @@
+/* GitHub Setup Interface Styles */
+
+/* Setup Cards */
+.setup-card {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+.setup-card:hover {
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+.setup-card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    border-bottom: 1px solid #eee;
+    cursor: pointer;
+}
+
+.setup-card-header h3 {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 18px;
+    color: #333;
+}
+
+.setup-icon {
+    font-size: 24px;
+}
+
+.setup-description {
+    margin: 0;
+    padding: 0 20px 20px;
+    color: #666;
+    font-size: 14px;
+}
+
+/* Auto Setup Specific */
+.auto-setup-card .setup-card-header {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border-radius: 8px 8px 0 0;
+}
+
+.auto-setup-card .setup-description {
+    background: #f8f9ff;
+    border-radius: 0 0 8px 8px;
+}
+
+/* Auto Connect Button */
+.auto-connect-btn {
+    background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 0 4px 15px rgba(40, 167, 69, 0.3);
+}
+
+.auto-connect-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(40, 167, 69, 0.4);
+}
+
+.auto-connect-btn:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.auto-connect-wrapper {
+    text-align: center;
+    padding: 20px;
+}
+
+.connect-note {
+    margin-top: 15px;
+    font-size: 14px;
+    color: #666;
+    font-style: italic;
+}
+
+/* Manual Setup Specific */
+.manual-setup-card .setup-card-header {
+    background: #f8f9fa;
+}
+
+.cdn-toggle-manual {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 4px;
+    transition: background-color 0.2s;
+}
+
+.cdn-toggle-manual:hover {
+    background: rgba(0,0,0,0.1);
+}
+
+/* Form Fields */
+.github-fields-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    padding: 20px;
+}
+
+.field-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.field-group.full-width {
+    grid-column: 1 / -1;
+}
+
+.field-group label {
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+.field-group input {
+    padding: 10px 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+    transition: border-color 0.2s;
+}
+
+.field-group input:focus {
+    border-color: #2271b1;
+    box-shadow: 0 0 0 1px #2271b1;
+    outline: none;
+}
+
+.field-description {
+    margin: 8px 0 0 0;
+    font-size: 13px;
+    color: #666;
+    font-style: italic;
+}
+
+/* Actions */
+.auto-setup-actions {
+    padding: 20px;
+    text-align: center;
+    background: #f8f9ff;
+    border-radius: 0 0 8px 8px;
+}
+
+.manual-form-actions {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    padding: 20px;
+    border-top: 1px solid #eee;
+    background: #f8f9fa;
+    border-radius: 0 0 8px 8px;
+}
+
+/* Buttons */
+.connect-github-btn {
+    background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.connect-github-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(40, 167, 69, 0.3);
+}
+
+/* Progress Bar */
+.github-progress {
+    margin: 20px 0;
+    display: none;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 8px;
+    background: #e9ecef;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #28a745, #20c997);
+    width: 0%;
+    transition: width 0.3s ease;
+}
+
+/* Divider */
+.setup-divider {
+    display: flex;
+    align-items: center;
+    margin: 30px 0;
+    text-align: center;
+}
+
+.setup-divider::before,
+.setup-divider::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: #ddd;
+}
+
+.setup-divider span {
+    padding: 0 20px;
+    color: #666;
+    font-weight: 500;
+    background: white;
+}
+
+/* Warning Messages */
+.manual-setup-warning {
+    background: #fff3cd;
+    border: 1px solid #ffeaa7;
+    border-radius: 4px;
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+.manual-setup-warning p {
+    margin: 0;
+    color: #856404;
+    font-size: 14px;
+}
+
+/* Connected State */
+.cdn-connected-section {
+    text-align: center;
+    padding: 20px;
+}
+
+.cdn-connection-actions {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .github-fields-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    
+    .manual-form-actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .cdn-connection-actions {
+        flex-direction: column;
+    }
+}
+
+/* Animation for collapsible content */
+.cdn-manual-form {
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+
+.cdn-manual-form[style*="display: none"] {
+    max-height: 0;
+    padding: 0;
+}
+
+.cdn-manual-form:not([style*="display: none"]) {
+    max-height: 1000px;
+}
+
+/* Loading states */
+.button.loading {
+    position: relative;
+    color: transparent;
+}
+
+.button.loading::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 16px;
+    height: 16px;
+    border: 2px solid #fff;
+    border-top: 2px solid transparent;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: translate(-50%, -50%) rotate(0deg); }
+    100% { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+/* Progress Section */
+.cdn-progress-section {
+    margin-top: 20px;
+    padding: 20px;
+    background: #f8f9fa;
+    border-radius: 8px;
+    border: 1px solid #e9ecef;
+}
+
+.cdn-progress-bar {
+    width: 100%;
+    height: 8px;
+    background: #e9ecef;
+    border-radius: 4px;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+
+.cdn-progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #28a745, #20c997);
+    width: 0%;
+    transition: width 0.3s ease;
+}
+
+.progress-status {
+    font-size: 14px;
+    color: #666;
+    text-align: center;
+}
+
+/* Status Messages */
+.auto-connect-status {
+    margin-top: 15px;
+    padding: 10px 15px;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.auto-connect-status.success {
+    background: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.auto-connect-status.error {
+    background: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+/* Divider */
+.cdn-divider {
+    display: flex;
+    align-items: center;
+    margin: 30px 0;
+    text-align: center;
+}
+
+.cdn-divider::before,
+.cdn-divider::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: #ddd;
+}
+
+.divider-text {
+    padding: 0 20px;
+    color: #666;
+    font-weight: 500;
+    background: white;
+    font-size: 14px;
+}
+
+/* Popup Instructions */
+.popup-instructions {
+    background: #e3f2fd;
+    border: 1px solid #bbdefb;
+    border-radius: 8px;
+    padding: 15px;
+    margin: 15px 0;
+    color: #1565c0;
+    font-size: 14px;
+}
+
+.popup-instructions .dashicons {
+    color: #1976d2;
+    margin-right: 8px;
+}
+
+/* Error States */
+.github-error {
+    background: #ffebee;
+    border: 1px solid #ffcdd2;
+    color: #c62828;
+    padding: 15px;
+    border-radius: 8px;
+    margin: 15px 0;
+}
+
+.github-success {
+    background: #e8f5e8;
+    border: 1px solid #c8e6c9;
+    color: #2e7d32;
+    padding: 15px;
+    border-radius: 8px;
+    margin: 15px 0;
+}
+
+/* Setup Instructions */
+.github-setup-instructions {
+    background: #f8f9fa;
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 20px 0;
+}
+
+.github-setup-instructions h4 {
+    margin-top: 0;
+    color: #495057;
+    font-size: 16px;
+}
+
+.github-setup-instructions ol {
+    margin: 15px 0;
+    padding-left: 20px;
+}
+
+.github-setup-instructions ol li {
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+.github-setup-instructions ul {
+    margin: 8px 0;
+    padding-left: 20px;
+}
+
+.github-setup-instructions ul li {
+    margin-bottom: 5px;
+    font-size: 14px;
+    color: #666;
+}
+
+.github-setup-instructions strong {
+    color: #333;
+}
